@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+	    <!-- bootstrap cdn -->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	    <!-- extra css -->
+	    <style type="text/css">
+	    	#main-header {
+	    		position: fixed;
+	    		height: 100vh;
+	    		max-height: calc(100vh - 0.2rem);
+	    		width: 33%;
+	    		border: 1px #000 solid;
+	    		margin: 0.1rem;
+	    		padding: 0;
+	    		overflow-y: auto;
+	    	}
+
+	    	#main-doc {
+	    		position: absolute;
+	    		width: 66%;
+	    		left: 34%;
+	    		text-align: left;
+	    		margin: auto;
+	    		padding: 0;
+	    	}
+
+	    	@media only screen and (max-width: 1080px) {
+	    		#main-header {
+	    			position: absolute;
+		    		height: 20rem;
+	    			width: 98%;
+		    		max-width: 98%;
+	    			margin: 0;
+	    		}
+
+	    		#main-doc {
+	    			top: 20rem;
+	    			width: 100vw;
+	    			max-width: 100vw;
+	    			margin: 0;
+	    			padding: 0;
+	    			left: 0;
+	    		}
+	    	}
+
+	    	#main-doc>*>:not(header) {
+	    		margin-left: 1rem;
+	    	}
+
+	    	#navbar>ul {
+	    		padding: 0;
+	    	}
+
+	    	#navbar>ul>a::before {
+	    		content: '> ';
+	    	}
+
+	    	#navbar>ul>a {
+	    		border: 1px #000 solid;
+	    		color: #000;
+	    	}
+
+	    	#welcome-section {
+	    		height: 100vh;
+	    	}
+
+	    	footer {
+	    		position: absolute;
+	    		margin: auto;
+	    		bottom: 0;
+	    	}
+	    </style>
+	</head>
+
+	<body>
+		<header id="main-header">
+			<nav id="navbar">
+				<header><h3>JS Documentation</h3></header>
+				<ul>
+					<a class="nav-link" href="#projects">Projects</a>
+					<a class="nav-link" href="#contact">Contact</a>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main-doc">
+
+			<section id="welcome-section">
+				<h1>
+					Hey I'm Ernest.
+				</h1>
+				<p>
+					a web developer
+				</p>
+			</section>
+
+			<section id="projects">
+				<h3 class="project-tile">Tribute Page</h3>
+				<a href="https://codepen.io/iattempt/full/MLzrmN" target="_blank">
+					<image src="https://c2.staticflickr.com/4/3689/10613180113_fdf7bcd316_b.jpg">
+					</image>
+				</a>
+			</section>
+
+		</main>
+
+		<footer>
+			<ul id="contact" class="nav">
+				<li class="nav-item">
+					<a class="nav-link" target="_blank" href="https://www.linkedin.com/in/yungyuan-chang/">
+						LinkedIn
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a id="profile-link" class="nav-link" target="_blank" href="https://github.com/iattempt">
+						GitHub
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" target="_blank" href="https://www.freecodecamp.org/fcc37790fac-5821-4487-aef8-43dd0e85dc34">
+						FCC
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="mailto:iattempt.net@gmail.com">
+						Send a mail
+					</a>
+				</li>
+			</ul>
+		</footer>
+	</body>
+</html>
