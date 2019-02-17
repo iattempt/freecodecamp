@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- extra css -->
+    <style>
+      #body {
+        width: 100%;
+        background-color: #eee;
+        justify-content: center;
+        text-align: center;
+      }
+
+      #header-img {
+        max-width: 100%;
+      }
+
+      #header {
+        position: fixed;
+        display: flex;
+        top: 0;
+        left: 0;
+        margin: auto;
+        width: 100%;
+        min-height: 100px;
+        background-color: #eee;
+      }
+
+      #nav-bar {
+        margin: auto;
+      }
+
+      #nav-brand {
+        float: right;
+      }
+
+      #form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+      }
+
+      #main {
+        position: relative;
+        top: 100px;
+      }
+
+      #form {
+        text-align: center;
+        justify-content: center;
+      }
+
+      #form>* {
+        display: block;
+        margin: 5px auto 5px auto;
+      }
+
+      #submit {
+        background-color: orange;
+        border-width: 0;
+      }
+
+      #pricing {
+        display: flex;
+      }
+
+      .pricing-card {
+        border: 1px #000 solid;
+        width: 33%;
+        text-align: center;
+      }
+
+      .pricing-card>:first-child {
+        background-color: #ccc;
+        margin: 0;
+      }
+
+      .pricing-card>:last-child>* {
+        border-width: 0;
+      }
+    </style>
+    
+  </head>
+  
+  <body id="body" class="container">
+    
+    <header id="header" class="row">
+      <nav id="nav-bar" class="navbar">
+        <a id="nav-brand" class="nav-brand col-6">
+          <image id="header-img" src="https://s3.amazonaws.com/freecodecamp/original_trombones.png"/>
+        </a>
+      
+        <div id="nav-links" class="col-">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#features">
+                Features 
+              </a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="#how-it-works">
+                How it works
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">
+                pricing
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+    <main id="main">
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <label for="email"><b>Handcrafted, home-made masterpieces</b>
+        </label>
+        <input id="email" name="email" type="email" placeholder="Enter your email address" required>
+        <input id="submit" type="submit" value="GET STARTED">
+      </form>
+      
+      <div id="features">
+        <h4>
+          Premium Materials
+        </h4>
+        <p>
+          Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.
+        </p>
+      </div>
+      <div>
+        <h4>
+          Fast Shipping
+        </h4>
+        <p>
+          We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.
+        </p>
+      </div>
+      <div>
+        <h4>
+          Quality Assurance
+        </h4>
+        <p>
+          For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.
+        </p>
+      </div>
+      
+      <section id="how-it-works">
+        <iframe id="video" width=400 height=400 src="https://www.youtube.com/embed/y8Yv4pnO7qc"></iframe>
+      </section>
+      
+      <section id="pricing">
+        <div id="tenor" class="pricing-card">
+          <h5>TENOR TROMBONE</h5>
+          <ul class="list-group">
+            <li class="list-group-item">$600</li>
+            <li class="list-group-item">Lorem ipsum.</li>
+            <li class="list-group-item">Lorem ipsum.</li>
+            <li class="list-group-item">Lorem ipsum dolor.</li>
+            <li class="list-group-item">Lorem ipsum.</li>
+          </ul>
+        </div>
+        <div id="bass" class="pricing-card">
+          <h5>BASS TROMBONE</h5>
+          <ul class="list-group">
+            <li class="list-group-item">$900</li>
+            <li class="list-group-item">Lorem ipsum.</li>
+            <li class="list-group-item">Lorem ipsum.</li>
+            <li class="list-group-item">Lorem ipsum dolor.</li>
+            <li class="list-group-item">Lorem ipsum.</li>
+          </ul>
+        </div>
+        <div id="valve" class="pricing-card">
+          <h5>VALVE TROMBONE</h5>
+          <ul class="list-group">
+            <li class="list-group-item">$1200</li>
+            <li class="list-group-item">Plays similar to a Trumpet</li>
+            <li class="list-group-item">Great for Jazz Bands</li>
+            <li class="list-group-item">Lorem ipsum dolor.</li>
+            <li class="list-group-item">Lorem ipsum.</li>
+          </ul>
+        </div>
+      </section>
+      
+    </main>
+    
+  </body>
+</html>
