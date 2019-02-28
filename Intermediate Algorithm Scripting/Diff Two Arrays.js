@@ -1,6 +1,4 @@
-function diffArray(arr1, arr2) {  // O(mlogm + nlogn)
-  var newArr = [];
-  // Same, same; but different.
+function diffArray(arr1, arr2) {  // O(mlogm) + O(nlogn)
   arr1.sort()
   arr2.sort()
 
@@ -15,9 +13,8 @@ function diffArray(arr1, arr2) {  // O(mlogm + nlogn)
       ++i2
     }
   }
-  newArr = arr1.concat(arr2)
 
-  return newArr;
+  return arr1.concat(arr2);
 }
 
 // [4]
