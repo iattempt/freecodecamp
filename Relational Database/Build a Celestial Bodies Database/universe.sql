@@ -48,10 +48,36 @@ SET default_table_access_method = heap;
 --
 
 CREATE TABLE public.five (
+    five_id integer NOT NULL,
+    name character varying(20),
+    non_nullable1 integer NOT NULL,
+    non_nullable2 integer NOT NULL
 );
 
 
 ALTER TABLE public.five OWNER TO freecodecamp;
+
+--
+-- Name: five_five_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
+--
+
+CREATE SEQUENCE public.five_five_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.five_five_id_seq OWNER TO freecodecamp;
+
+--
+-- Name: five_five_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
+--
+
+ALTER SEQUENCE public.five_five_id_seq OWNED BY public.five.five_id;
+
 
 --
 -- Name: galaxy; Type: TABLE; Schema: public; Owner: freecodecamp
@@ -221,6 +247,13 @@ ALTER SEQUENCE public.star_primary_key_seq OWNED BY public.star.star_id;
 
 
 --
+-- Name: five five_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.five ALTER COLUMN five_id SET DEFAULT nextval('public.five_five_id_seq'::regclass);
+
+
+--
 -- Name: galaxy galaxy_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
 --
 
@@ -252,6 +285,9 @@ ALTER TABLE ONLY public.star ALTER COLUMN star_id SET DEFAULT nextval('public.st
 -- Data for Name: five; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.five VALUES (1, 'a', 1, 1);
+INSERT INTO public.five VALUES (3, 'b', 1, 1);
+INSERT INTO public.five VALUES (4, 'c', 1, 1);
 
 
 --
@@ -323,6 +359,13 @@ INSERT INTO public.star VALUES (6, 'b', 2.0, 'b', false, true, 6, 2, 2, NULL);
 
 
 --
+-- Name: five_five_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
+--
+
+SELECT pg_catalog.setval('public.five_five_id_seq', 5, true);
+
+
+--
 -- Name: galaxy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
@@ -348,6 +391,22 @@ SELECT pg_catalog.setval('public.planet_id_seq', 12, true);
 --
 
 SELECT pg_catalog.setval('public.star_primary_key_seq', 6, true);
+
+
+--
+-- Name: five constraintname; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.five
+    ADD CONSTRAINT constraintname UNIQUE (name);
+
+
+--
+-- Name: five five_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.five
+    ADD CONSTRAINT five_pkey PRIMARY KEY (five_id);
 
 
 --
